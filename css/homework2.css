@@ -37,22 +37,22 @@ a:visited{
 }
 
 .container-homework2{
-    background-color: rgb(114, 114, 114);
+    /* background-color: rgb(114, 114, 114); */
     width: 70vw;
     height: 70vh;
     margin: 3px;
-    border: 1px solid black;
-    border-radius: 3px;
+    /* border: 1px solid black; */
+    /* border-radius: 3px; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 #label-coming-soon{
-    color: black;
-    background-color: white;
-    padding: 10px 20px;
-    font-size: 70px;
-    border: none;
-    border-radius: 3px;
+    /* color: black; */
+    /* background-color: white; */
+    /* padding: 10px 20px; */
+    /* font-size: 70px; */
+    /* border: none; */
+    /* border-radius: 3px; */
 }
