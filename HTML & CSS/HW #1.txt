@@ -1,0 +1,18 @@
+1. setup
+
+It's a script that create a folder called public_html in our Hills account
+
+
+2. cd public_html
+
+It's getting us inside the folder public_html
+
+
+3. mkdir cnit131H
+
+it's creating a new folder called cnit131H
+
+
+4. ls -a
+
+It's showing us all the files that exist inside the folder were we are, even those that are hidden
