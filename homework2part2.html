@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part II - Homework 2</title>
+    <link rel="stylesheet" href="./css/homework2part2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="homework2-part2">
+        <h3 id="header-part2">Part II</h3>
+        <div class="container-part2-links">
+            <a href="./homework2.html" id="button-homework2">
+                Homework 2 page
+            </a>
+            <a href="./homework2part1.html" id="button-part-1">
+                Part I
+            </a>
+        </div>
+
+        <form class="form-hmw2-part2">
+            <label>Enter first number:
+                <input type="text" id="input1" />
+            </label>
+            <label>Enter second number:
+                <input type="text" id="input2" />
+            </label>
+            <label>Enter third number:
+                <input type="text" id="input3" />
+            </label>
+
+            <div class="buttons-form">
+                <button type="button" id="button-process">Process Data</button>
+                <button type="button" id="button-clear">Clear Form</button>
+            </div>
+        </form>
+
+        <div class="result-hmw2-part2">
+            <div id="result"></div>
+            <button type="button" id="fade-result">Fade Results</button>
+
+            <script>
+                $(document).ready(function(){
+                    function isNumber(value){
+                        return !isNaN(value) && value !== '';
+                    }
+
+                    function clearForm(){
+                        $('#input1, #input2, #input3').val('');
+                        $('#result').html('');
+                    }
+
+                    function processData(){
+                        let num1 = $('#input1').val();
+                        let num2 = $('#input2').val();
+                        let num3 = $('#input3').val();
+
+                        if(isNumber(num1) && isNumber(num2) && isNumber(num3)) {
+                            num1 = parseFloat(num1);
+                            num2 = parseFloat(num2);
+                            num3 = parseFloat(num3);
+
+                            const sum = num1 + num2 + num3;
+                            const average = sum / 3
+                            const product = num1 * num2 * num3;
+                            const smallest = Math.min(num1, num2, num3);
+                            const largest = Math.max(num1, num2, num3);
+
+                            const result = `
+                                <p>Sum: ${sum}</p>
+                                <p>Average: ${average}</p>
+                                <p>Product: ${product}</p>
+                                <p>Smallest ${smallest}</p>
+                                <p>Largest: ${largest}</p>
+                            `;
+                            $('#result').html(result).fadeIn();
+                        } else {
+                            $('#result').html('<label style="color: red;">Please enter valid numbers in all fields</label>')
+                        }
+                    }
+
+                    $('#button-clear').click(function(){
+                        clearForm();
+                    });
+
+                    $('#button-process').click(function(){
+                        processData();
+                    });
+
+                    $('#fade-result').click(function(){
+                        $('#result').fadeOut();
+                    })
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
