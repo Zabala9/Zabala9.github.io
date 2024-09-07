@@ -27,15 +27,6 @@ body{
     left: -30vw;
 }
 
-a{
-    /* font-style: none; */
-    text-decoration: none;
-}
-
-a:visited{
-    color: black;
-}
-
 .container-homework2{
     background-color: rgb(114, 114, 114);
     width: 70vw;
