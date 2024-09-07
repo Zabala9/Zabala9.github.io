@@ -31,6 +31,12 @@ body{
     border: 1px solid black;
     border-radius: 3px;
     background-color: white;
+    transition: 0.5s;
+}
+
+#button-homework2:hover, #button-part-2:hover{
+    font-size: 20px;
+    transition: 0.5s;
 }
 
 .container-script-part1{
